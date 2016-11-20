@@ -5,8 +5,27 @@
 #include <time.h>
 
 /*
- 
- ./SFNetGen [filename] [TFSteps]
+
+This code generates a scale-free network of N nodes and whose power-law
+distribution has an exponent of beta. These parameters are introduced below.
+Usage:
+	./SFNetGen [filename] [TFSteps]
+The program receives 2 parameters:
+filename -- the name of the output file containing the adjacency matrix of the network
+TFSteps -- the code performs a triad formation step to maximize the clustering coefficient
+	of the network.
+
+The program outputs several files:
+[filename] contains the adjacency matrix of the created network
+[filename]_CCs shows the clustering coefficient of every node in the network
+[filename]_inDD contains the in-degree distribution of the network. (This should follow
+	a Poisson distribution roughly)
+[filename]_inDegs shows the in-degree of every node in the network
+[filename]_outDD contains the out-degree distribution of the network. This follows a power-
+	law distribution when plotted.
+[filename]_outDegs shows the out-degree of every node in the network
+[filename]_T is the adjacency matrix of the transpose of the network created. Here, the
+	direction of edges get reversed. Thus, out-degrees become in-degrees, and vice versa.
  
 */
 
