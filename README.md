@@ -6,3 +6,6 @@ in complex networks of integrate-and-fire neurons.
 Code in this repo:
 
 -SFNetGen: program to generate scale-free networks of exponent \beta and N nodes.
+-Motifs: program to produce the motif distribution of a directed network.
+
+
